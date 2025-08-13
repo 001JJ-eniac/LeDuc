@@ -1,0 +1,25 @@
+name: leduc_login
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.7 # Adicionei a dependência aqui
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+# A seção flutter é onde você define a pasta de assets.
+flutter:
+  # O seguinte linha diz ao Flutter para incluir assets da pasta 'assets'.
+  assets:
+  uses-material-design: true
