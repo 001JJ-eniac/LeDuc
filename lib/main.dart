@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:leduc_login/login_page.dart'; // Importa a nova página de login
+import 'package:leduc_login/pages/login_page.dart'; // Importa a nova página de login
 
 void main() {
   runApp(const MyApp());
