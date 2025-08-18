@@ -22,4 +22,5 @@ dev_dependencies:
 flutter:
   # O seguinte linha diz ao Flutter para incluir assets da pasta 'assets'.
   assets:
+    - assets/camaleãoMeme.jpg
   uses-material-design: true

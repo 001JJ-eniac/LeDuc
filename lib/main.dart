@@ -1,6 +1,7 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:leduc_login/login_page.dart'; // Importa a nova página de login
+import 'package:leduc_login/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Definimos a nova cor roxa principal para a tela
+    // Definimos as cores principais
     const Color primaryColor = Colors.purple;
     const Color scaffoldBackgroundColor = Color(0xFFF0F0F0);
 
     return MaterialApp(
       title: 'LeDuc App',
-      home: const SelectionPage(),
+      // Define a SplashScreen como a primeira tela a ser exibida
+      home: const SplashScreen(),
       theme: ThemeData(
         primaryColor: primaryColor,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
@@ -28,6 +30,53 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// Classe da SplashScreen que mostra a imagem e navega para a próxima tela
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+    // Inicia um temporizador de 3 segundos
+    Timer(
+      const Duration(seconds: 3),
+      () {
+        // Verifica se o widget ainda está montado antes de navegar
+        if (mounted) {
+          // Após o temporizador, navega para a SelectionPage
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (BuildContext context) => const SelectionPage(),
+            ),
+          );
+        }
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // Scaffold com a cor de fundo e a imagem do camaleão
+    return Scaffold(
+      backgroundColor: const Color(0xFFF0F0F0),
+      body: Center(
+        child: Image.asset(
+          // O caminho da sua imagem que você declarou no pubspec.yaml
+          'assets/camaleãoMeme.jpg',
+          width: 250, 
+        ),
+      ),
+    );
+  }
+}
+
+// A sua tela de seleção de perfil original
 class SelectionPage extends StatelessWidget {
   const SelectionPage({super.key});
 
