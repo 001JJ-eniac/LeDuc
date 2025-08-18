@@ -1,10 +1,16 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:leduc_login/pages/page_tutorial.dart';
 import 'package:leduc_login/pages/login_page.dart';
+import 'package:leduc_login/pages/page_inicial.dart';
+import 'package:leduc_login/constant/app_constant.dart';
+import 'package:leduc_login/constant/tutorial_constant.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MaterialApp(
+    home: TutorialPage(), 
+  ));
 }
 
 class MyApp extends StatelessWidget {
