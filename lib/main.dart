@@ -3,9 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:leduc_login/pages/page_tutorial.dart';
 import 'package:leduc_login/pages/login_page.dart';
-import 'package:leduc_login/pages/page_inicial.dart';
-import 'package:leduc_login/constant/app_constant.dart';
-import 'package:leduc_login/constant/tutorial_constant.dart';
+// import 'package:leduc_login/pages/page_inicial.dart';
+// import 'package:leduc_login/constant/app_constant.dart';
+// import 'package:leduc_login/constant/tutorial_constant.dart';
+
+/**
+ * LeDuc App
+ * @author Kaliel
+ * @version 1.0
+ * @description Tela inicial do aplicativo LeDuc, que exibe uma imagem de camaleão e navega para a tela de seleção de perfil após 3 segundos.
+ * @date 2024-01-01
+ * @license MIT
+ * @see
+ * <https://github.com/001JJ-eniac/LeDuc>
+ *  - Os comentarios nos imports foram feitos pois não estou utilizando esses arquivos no momento, mas podem ser utilizados posteriormente.
+
+ */
 
 void main() {
   runApp(const MaterialApp(
